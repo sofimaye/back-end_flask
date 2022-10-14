@@ -1,0 +1,19 @@
+body {
+    align-items: center;
+    background-color: hsl(204, 8%, 76%);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    display: grid;
+    background-color: hsl(211, 12%, 48%);
+    border-radius: 20px;
+    box-sizing: content-box;
+    padding: 20px;
+}
+label, input{
+    max-width: 100%;
+    margin: 2%;
+}
