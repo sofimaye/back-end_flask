@@ -87,7 +87,12 @@ def info():
         record = {'record_id': request.form['expense_id'], 'user_id': int(request.form['user_id']),
                   'category_id': int(request.form['category_id']), 'description': request.form['description'],
                   'cost_in_uah': request.form['cost']}
+        category = {
+            'category_id': int(request.form['category_id']),
+            'category_description': request.form['description']
+        }
         records.append(record)
+        categories.append(category)
         return record
     else:
         return render_template('user_form.html')
