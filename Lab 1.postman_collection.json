@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "10b37165-62a2-43a8-a707-cd957d512ee2",
+		"name": "Lab 1",
+		"description": "Collection of urls for the 1 lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "all categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://backendflask1.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"backendflask1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://backendflask1.herokuapp.com/records",
+							"protocol": "https",
+							"host": [
+								"backendflask1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"records"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all records by specific user id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "all user's records by id and by category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"description": "if searching by user_id and by category_id it necessary to specify the key value at params else the search will be only by user_id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"category_id\": 4,\n        \"category_description\": \"food\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://backendflask1.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"backendflask1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create record",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\n        \"record_id\": 23,\n        \"user_id\": 2,\n        \"category_id\": 4,\n        \"description\": \"apples\",\n        \"cost_in_uah\": 50\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://backendflask1.herokuapp.com/records",
+							"protocol": "https",
+							"host": [
+								"backendflask1",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"records"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
